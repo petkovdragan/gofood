@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GoFood Drive-through</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+        integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome/font-awesome/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- Just an image -->
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" height="50px">
+            </a>
+        </nav>
+
+        <div class="row" style="margin-top: 5rem">
+            <div class="col-md-8">
+                <div style="display: flex; justify-content: space-between; align-items: center">
+                    <h2 class="text-helper" style="margin-bottom: 2rem">Pick a category</h2>
+                    <button class="btn btn-primary handleCategory" style="display: none; padding: 1rem 5rem;" onClick="handleCategory(0)">Go
+                        Back</button>
+                </div>
+
+                <div class="row categories">
+                    <div class="col-md-6" onclick="handleCategory(1);">
+                        <div>
+                            <img src="images/burger.png ">
+                        </div>
+
+                        <h2>Burger</h2>
+                    </div>
+                    <div class="col-md-6" onclick="handleCategory(2);">
+                        <div>
+                            <img src="images/drinks.png"></div>
+
+                        <h2>Drinks</h2>
+                    </div>
+                </div>
+
+                <div class="row categories">
+                    <div class="col-md-6" onclick="handleCategory(3);">
+                        <div>
+                            <img src="images/salads.png">
+                        </div>
+
+                        <h2>Salads</h2>
+                    </div>
+                    <div class="col-md-6" onclick="handleCategory(4);">
+                        <div>
+                            <img src="images/frenchfries.png"></div>
+
+                        <h2>French Fries</h2>
+                    </div>
+                </div>
+
+                <!-- list of burgers -->
+                <div class="burgerList">
+                    <ul>
+                        <li class="list-item">
+                            <img src="images/chickenburger.png">
+
+                            <div class="list-item-details">
+                                <p><b>Chicken Burger</b></p>
+                                <p> <input type="checkbox" value="bun" checked> bun
+                                    <input type="checkbox" value="chicken" checked> chicken 
+                                    <input type="checkbox" value="lettuce" checked> lettuce 
+                                    <input type="checkbox" value="tomatoes" checked> tomatoes 
+                                    <input type="checkbox" value="onions" checked> onions  
+                                    <input type="checkbox" value="pickes" checked> pickles 
+                                    <input type="checkbox" value="secret sauce" checked> secret sauce</p>
+                               
+                            
+                            </div>
+
+                            <div class="list-item-actions">
+                                <span style="font-size: 3rem">5.5$</span>
+                                <button class="btn btn-primary addToCart">Add to cart</button>
+                            </div>
+
+                        </li>
+
+                        <li class="list-item">
+                            <img src="images/hamburger.jpg">
+
+                            <div class="list-item-details">
+                                <p><b>Hamburger</b></p>
+                                <p> <input type="checkbox" value="bun" checked> bun
+                                    <input type="checkbox" value="chicken" checked>beef
+                                    <input type="checkbox" value="lettuce" checked> lettuce 
+                                    <input type="checkbox" value="tomatoes" checked> tomatoes 
+                                    <input type="checkbox" value="onions" checked> onions  
+                                    <input type="checkbox" value="pickes" checked> pickles 
+                                    <input type="checkbox" value="secret sauce" checked> secret sauce</p>
+                            </div>
+
+                            <div class="list-item-actions">
+                                <span style="font-size: 3rem">3.5$</span>
+                                <button class="btn btn-primary addToCart">Add to cart</button>
+                            </div>
+
+                        </li>
+
+                        <li class="list-item">
+                            <img src="images/bacon.png">
+
+                            <div class="list-item-details">
+                                <p><b>Bacon Burger</b></p>
+                                <p> <input type="checkbox" value="bun" checked> bun
+                                    <input type="checkbox" value="chicken" checked> bacon 
+                                    <input type="checkbox" value="lettuce" checked> lettuce 
+                                    <input type="checkbox" value="tomatoes" checked> tomatoes 
+                                    <input type="checkbox" value="onions" checked> onions  
+                                    <input type="checkbox" value="pickes" checked> pickles 
+                                    <input type="checkbox" value="secret sauce" checked> secret sauce</p>
+                            </div>
+
+                            <div class="list-item-actions">
+                                <span style="font-size: 3rem">2.5$</span>
+                                <button class="btn btn-primary addToCart">Add to cart</button>
+                            </div>
+
+                        </li>
+
+                        <li class="list-item">
+                            <img src="images/spicyy.png">
+
+                            <div class="list-item-details">
+                                <p><b>Spicy Burger</b></p>
+                                <p> <input type="checkbox" value="bun" checked> bun
+                                    <input type="checkbox" value="chicken" checked> chicken 
+                                    <input type="checkbox" value="lettuce" checked> lettuce 
+                                    <input type="checkbox" value="tomatoes" checked> tomatoes 
+                                    <input type="checkbox" value="onions" checked> onions  
+                                    <input type="checkbox" value="pickes" checked> pickles 
+                                    <input type="checkbox" value="secret sauce" checked> secret sauce</p>
+                            </div>
+
+                            <div class="list-item-actions">
+                                <span style="font-size: 3rem">6.0$</span>
+                                <button class="btn btn-primary addToCart">Add to cart</button>
+                            </div>
+
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!--DRINKS LIST-->
+                <div class="drinksList">
+                    <ul>
+                        <li class="list-item">
+                            <img src="images/pepsi.png">
+
+                            <div class="list-item-details">
+                                <p><b>Pepsi </b>0.5l</p>
+                                <p>Pepsi is a carbonated soft drink manufactured by PepsiCo. </p>
+                                
+                            </div>
+
+                            <div class="list-item-actions">
+                                <span style="font-size: 3rem">1.5$</span>
+                                <button class="btn btn-primary addToCart">Add to cart</button>
+                            </div>
+
+                        </li>
+
+                        <li class="list-item">
+                            <img src="images/cocacola.png">
+
+                            <div class="list-item-details">
+                                <p><b>Coca Cola </b>0.5l</p>
+                                 <p>Coca-Cola is a carbonated soft drink manufactured by The Coca-Cola Company.</p>
+
+                            </div>
+
+                            <div class="list-item-actions">
+                                <span style="font-size: 3rem">1.75$</span>
+                                <button class="btn btn-primary addToCart">Add to cart</button>
+                            </div>
+
+                        </li>
+
+                        <li class="list-item">
+                            <img src="images/orange.png">
+
+                            <div class="list-item-details">
+                                <p><b>Fresh Orange Juice</b> 0.5l</p>
+                                 <p>Orange juice is a liquid extract of the orange tree fruit, produced by squeezing or reaming oranges</p>
+                            </div>
+
+                            <div class="list-item-actions">
+                                <span style="font-size: 3rem">2.0$</span>
+                                <button class="btn btn-primary addToCart">Add to cart</button>
+                            </div>
+
+                        </li>
+
+                        <li class="list-item">
+                            <img src="images/sprite.png">
+
+                            <div class="list-item-details">
+                                <p><b>Sprite</b> 0.5l</p>
+                                 <p>Sprite  a lemon-lime beverage produced by the Coca-Cola Company</p>
+                            </div>
+
+                            <div class="list-item-actions">
+                                <span style="font-size: 3rem">1.25$</span>
+                                <button class="btn btn-primary addToCart">Add to cart</button>
+                            </div>
+
+                        </li>
+                    </ul>
+                </div>
+                <!-- END DRINK LIST -->
+
+
+
+                <!-- SALAD LIST -->
+                <div class="saladList">
+                    <ul>
+                        <li class="list-item">
+                            <img src="images/chickeen.png">
+
+                            <div class="list-item-details">
+                                <p><b>Caesar Salad</b></p>
+                               <p>(Crisp croutons,chicken,romaine lettuce,Parmesan cheese,mayonnaise) </p>
+                            </div>
+
+                            <div class="list-item-actions">
+                                <span style="font-size: 3rem">5.5$</span>
+                                <button class="btn btn-primary addToCart">Add to cart</button>
+                            </div>
+
+                        </li>
+
+                        <li class="list-item">
+                            <img src="images/prawn.png">
+
+                            <div class="list-item-details">
+                                <p><b>Prawn & Almond Salad</b></p>
+                                <p>Sautéed fresh prawn with garlic, orange juice salt pepper over a mix lettuce salad seasoned with orange vinaigrette</p>
+                            </div>
+
+                            <div class="list-item-actions">
+                                <span style="font-size: 3rem">6.5$</span>
+                                <button class="btn btn-primary addToCart">Add to cart</button>
+                            </div>
+
+                        </li>
+
+                        <li class="list-item">
+                            <img src="images/thai.png">
+
+                            <div class="list-item-details">
+                                <p><b>Thai Salad</b></p>
+                                <p>2oo gr skewered chicken breast, seasoned with barbecue sauce, orange, lemon, garlic, steam rice noodles, mixed lettuce, cabbage, carrot, drizzle with Thai peanut</p>
+                            </div>
+
+                            <div class="list-item-actions">
+                                <span style="font-size: 3rem">8.5$</span>
+                                <button class="btn btn-primary addToCart">Add to cart</button>
+                            </div>
+
+                        </li>
+
+                        <li class="list-item">
+                            <img src="images/rocket.png">
+
+                            <div class="list-item-details">
+                                 <p><b>Rocket salad</b></p>
+                                <p>Wild crunchy rocket leaves, sweet cherry tomatoes, parmegianno reggiano cheese tossed with Italian vinaigrette</p>
+                            </div>
+
+                            <div class="list-item-actions">
+                                <span style="font-size: 3rem">6.0$</span>
+                                <button class="btn btn-primary addToCart">Add to cart</button>
+                            </div>
+
+                        </li>
+                    </ul>
+                </div>
+                <!-- end salad list-->
+
+                <!-- french fries list-->
+                <div class="frenchFriesList">
+                    <ul>
+                        <li class="list-item">
+                            <img src="images/small.png">
+
+                            <div class="list-item-details">
+                                <p><b>French Fries(small)</b></p>
+                               <p>More delicious than ever, our signature piping hot, thick cut Salted French Fries are golden on the outside and fluffy on the inside. </p>
+                            
+                            </div>
+
+                            <div class="list-item-actions">
+                                <span style="font-size: 3rem">1.25$</span>
+                                <button class="btn btn-primary addToCart">Add to cart</button>
+                            </div>
+
+                        </li>
+
+                        <li class="list-item">
+                            <img src="images/small.png">
+
+                            <div class="list-item-details">
+                                <p><b>French Fries(medium)</b></p>
+                                <p>More delicious than ever, our signature piping hot, thick cut Salted French Fries are golden on the outside and fluffy on the inside. </p>
+                            </div>
+
+                            <div class="list-item-actions">
+                                <span style="font-size: 3rem">2.0$</span>
+                                <button class="btn btn-primary addToCart">Add to cart</button>
+                            </div>
+
+                        </li>
+
+                        <li class="list-item">
+                            <img src="images/small.png">
+
+                            <div class="list-item-details">
+                                <p><b>French Fries(large)</b></p>
+                                <p>More delicious than ever, our signature piping hot, thick cut Salted French Fries are golden on the outside and fluffy on the inside. </p>
+                            </div>
+
+                            <div class="list-item-actions">
+                                <span style="font-size: 3rem">3.0$</span>
+                                <button class="btn btn-primary addToCart">Add to cart</button>
+                            </div>
+
+                        </li>
+
+                        
+                    </ul>
+                </div>
+                <!-- end french fries list-->
+            </div>
+            <div class="col-md-4">
+                <h2 style="margin-bottom: 2rem">Your Order</h2>
+                <div class="shopping-cart">
+                    <ul>
+                       
+                    </ul>
+                </div>
+                <hr style="border-top: 1px solid rgba(0,0,0,.25) !important;">
+                <p class="lead text-center totalPrice">Total Price: <b>150$</b></p>
+                <button class="btn btn-success" onclick="finishOrder()">Finish Order</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous">
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
+    <script src="custom.js">   
+    </script>
+
+</body>
+
+</html>
